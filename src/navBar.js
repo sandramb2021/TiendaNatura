@@ -1,12 +1,10 @@
-import logo from './logo.svg';
-import React from 'react';
-import './App.css';
-import  "./navBar";
+import React  from "react";
 
-function App() {
-  return (
-    <div className="App">
-     <div class="headerContainer">
+import "./navbar.css";
+
+const Menu =() => {
+
+      <div class="headerContainer">
       <div class="logo">Tienda NATURA</div>
       <div class="navbar">
         <ul>
@@ -17,8 +15,7 @@ function App() {
         </ul>
       </div>
     </div>
-    </div>
-  );
+   
 }
 
-export default App;
+export default Menu;
