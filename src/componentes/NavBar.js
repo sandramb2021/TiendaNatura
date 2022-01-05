@@ -1,10 +1,9 @@
 import React  from "react";
 
-import "./navbar.css";
 
-const Menu =() => {
-
-      <div class="headerContainer">
+function NavBar ()  {
+  return (
+    <div class="headerContainer">
       <div class="logo">Tienda NATURA</div>
       <div class="navbar">
         <ul>
@@ -15,7 +14,7 @@ const Menu =() => {
         </ul>
       </div>
     </div>
-   
+  );
 }
 
-export default Menu;
+export default NavBar;
