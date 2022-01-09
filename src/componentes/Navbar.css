@@ -1,30 +1,43 @@
 
 .headerContainer{
-    background-color: rgba(160, 9, 122, 0.555);
+   /* background-color: rgba(160, 9, 122, 0.555);*/
+   background-color: rgb(190, 161, 205);
+   
     width: 100%;
-    padding: 1em;
     position: fixed;
     backdrop-filter: blur(8px);
     box-shadow: 0 0 10px black;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: row;*/
     justify-content: center;
   }
   
-  .logo{
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .logo, .cart{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 20%;
     text-align: center;
   }
-  .navbar{
-    margin: 20px 400px 20px 400px;
+
+  .cart{
+    display: flex;
+    align-items: center;
+    color:white;
   }
-  
+
+  .cart label{
+    margin: 10px;
+  }
+  .navbar{
+    margin: 35px 200px 35px 200px;
+    width: 60%;
+  }
+
   .navbar ul{
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   
   .navbar ul li a{
