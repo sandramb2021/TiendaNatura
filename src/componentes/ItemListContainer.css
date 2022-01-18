@@ -4,6 +4,7 @@
     text-align: center;
     width: 100%;
     color: slateblue;
+    padding: 2em;
 }
 
 .item{
@@ -14,18 +15,4 @@
     background-color: white;
     width: 200px;
     text-align: center;
-}
-
-.itemCount-Container button{
-    padding: 10px;
-    background-color: white;
-    border-color: thistle;
-    border-style: solid;
-    font-size: 16px;
-    margin: 0 20px;
-}
-
-.itemCount-Container label{
-    display: inline-block;
-   
 }

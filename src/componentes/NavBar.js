@@ -5,10 +5,10 @@ import "./Navbar.css";
 
 function NavBar ()  {
   return (
-    <div class="headerContainer">
-      <div class="logo">
+    <div className="headerContainer">
+      <div className="logo">
         <img src={logo} alt="logo"/></div>
-      <div class="navbar">
+      <div className="navbar">
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Productos</a></li>
