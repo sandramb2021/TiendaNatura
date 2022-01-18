@@ -2,15 +2,19 @@ import React from "react";
 import ItemCount  from "./ItemCount";
 import "./Item.css";
 
-export const Item =({ title, price, pictureUrl, description }) =>
+export const Item =({ item}) =>
  {
+     
    return (
          
-      <div className="product">
-            <h2 className="title">{title}</h2>         
-            <img className="image" alt={title} src={pictureUrl}></img>
-            <p className="price">${price}</p>
-            <p className="description">{description}</p>
+      <div key={item.id} className="product">
+            <img className="image" alt={item.id} src={item.image}></img>
+            <div>
+               <h2 className="name">{item.name}</h2>         
+               
+               <p className="species">{item.species}</p>
+               <p className="status">{item.status}</p>
+            </div>
             <ItemCount stock={5} initial={1}/>
       </div>
    )  ;
