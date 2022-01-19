@@ -1,23 +1,23 @@
 import React from "react";
-import {Item} from "./Item";
+import Item from "./Item";
 import "./ItemList.css";
 
-const ItemList = ({ products }) => {
-   console.log("Productos en IL", products);
-   return (
-      <div className="ItemList">
-       {products.map((product) => {
-         return (
-           <Item
-             key={product.id}
-             title={product.title}
-             pictureUrl={product.pictureUrl}
-             price={product.price}
-             description={product.description}
-           />
-         );
-       })}
-     </div>
-   );
- };
- export default ItemList;
+const ItemList = ({ items }) => {
+    console.log("Items en IL", items);
+    return (
+       <div className="ItemList">
+        {items.map((item) => {
+          return (
+            <Item
+              key={item.id}
+              title={item.title}
+              pictureUrl={item.pictureUrl}
+              price={item.price}
+              description={item.description}
+            />
+          );
+        })}
+      </div>
+    );
+  };
+  export default ItemList;

@@ -1,18 +1,10 @@
-.catalogo{
+.catalogoItems {
     position: absolute;
-    margin-top: 160px;
-    text-align: center;
-    width: 100%;
-    color: slateblue;
+    margin-top: 100px;
+    display: flex;
+    align-items: right;  
+   /* text-align: center;*/
+    color:  #a656b1;
     padding: 2em;
-}
-
-.item{
-    border-style: solid;
-    border-color: slategray;
-    position: absolute;
-    margin-top: 200px;
-    background-color: white;
-    width: 200px;
-    text-align: center;
+    gap: 24px;
 }
