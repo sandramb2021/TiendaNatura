@@ -1,35 +1,39 @@
 import React, { useState , useEffect}  from "react";
 import "./ItemListContainer.css";
-import  ItemList from "./ItemList";
+import ItemList from "./ItemList";
+
+
 
 const ItemListContainer = () => {  
-    
-    const [personajes, setpersonajes] = useState([]);    
+  const [items, setItems] = useState([]);
 
     useEffect(() => {
-        
-        const getPersonajes = async () => {
+        const getItems = async () => {
+
             try {
-                const response = await fetch("https://rickandmortyapi.com/api/character");
+                const response = await fetch("https://franncode.vercel.app/api/products");
                 const data = await response.json();
-                setpersonajes(data.results);
+
+
+                console.log("Los items", data);
+                setItems(data);
+
                 
             } catch (error) {
                 console.log(error)
             };
         };
-        
-        getPersonajes();
+
+        getItems();
     },[]);
 
     return(
-        <div className="catalogo">
-            <label >Todos los productos para que te veas increíble</label>
-                {personajes ? 
-                    <ItemList personajes={personajes} />
-               : <p>Consultando personajes Rick & Morty....</p>}
+        <div className="catalogoItems">
+                {items ? <ItemList items={items} />    
+                     : <p>Consultando producto....</p>}
+
         </div>
     );
   }
   
-export default   ItemListContainer;
+export default ItemListContainer

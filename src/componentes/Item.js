@@ -1,22 +1,33 @@
 import React from "react";
-import ItemCount  from "./ItemCount";
 import "./Item.css";
 
-export const Item =({ item}) =>
- {
-     
-   return (
-         
-      <div key={item.id} className="product">
-            <img className="image" alt={item.id} src={item.image}></img>
-            <div>
-               <h2 className="name">{item.name}</h2>         
-               
-               <p className="species">{item.species}</p>
-               <p className="status">{item.status}</p>
-            </div>
-            <ItemCount stock={5} initial={1}/>
-      </div>
-   )  ;
-};
 
+const Item = ({ title, price, pictureUrl, description }) => {  
+    const onDetail =() => {
+        const message =`Quieres ver más info del producto ${title}`;
+        alert(message) ;        
+    };
+
+
+    return (
+      
+        <div className="itemDetail">
+                <div className="itemDetail-imageContainer">
+                    <div className="itemDetail-image">
+                        <img className="image" alt={title} src={pictureUrl}></img>
+                    </div>
+                    <div className="itemDetail-desc">
+                        <h2 className="title">{title}</h2>       
+                        <div className="price-space"></div><div className="price-container">                                           
+                        <p className="price">${price}</p></div> 
+                        <p className="description">{description}</p>
+                    </div>
+                </div>
+                <div className="itemDetail-detalles">
+                    <button id="masDetalles" onClick={onDetail}>Ver más detalles</button>
+                </div>
+            </div>        
+     
+   );
+ };
+ export default Item;

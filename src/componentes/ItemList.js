@@ -1,17 +1,25 @@
 import React from "react";
-import {Item} from "./Item";
+import Item from "./Item";
 import "./ItemList.css";
 
-const ItemList = ({ personajes }) => {
-   /*console.log("Personajes en IL", personajes);*/
-   return (
-      <div className="ItemList">
-       {personajes.map((personaje) => (
-         <Item item={personaje} />
-      
-         )
-       )}
-     </div>
-   );
- };
- export default ItemList;
+
+const ItemList = ({ items }) => {
+    console.log("Items en IL", items);
+    return (
+       <div className="ItemList">
+        {items.map((item) => {
+          return (
+            <Item
+              key={item.id}
+              title={item.title}
+              pictureUrl={item.pictureUrl}
+              price={item.price}
+              description={item.description}
+            />
+          );
+        })}
+      </div>
+    );
+  };
+  export default ItemList;
+
