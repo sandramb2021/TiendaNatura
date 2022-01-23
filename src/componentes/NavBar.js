@@ -7,7 +7,10 @@ function NavBar ()  {
   return (
     <div className="headerContainer">
       <div className="logo">
-        <img src={logo} alt="logo"/></div>
+        <Link to="/">
+          <img src={logo} alt="logo"/>
+        </Link>
+       </div>
       <div className="navbar">
         <ul>
           <li><a href="#">Inicio</a></li>
