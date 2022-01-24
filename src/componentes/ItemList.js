@@ -11,10 +11,11 @@ const ItemList = ({ items }) => {
           return (
             <Item
               key={item.id}
+              id={item.id}
               title={item.title}
-              pictureUrl={item.pictureUrl}
+              image={item.image}
               price={item.price}
-              description={item.description}
+              description={item.description}              
             />
           );
         })}
